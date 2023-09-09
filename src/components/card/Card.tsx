@@ -1,36 +1,29 @@
 import { Component, JSX } from "solid-js";
 
-import {
-  Button,
-  Card,
-  CardActions,
-  CardContent,
-  Typography,
-} from "@suid/material";
-
 type Props = {
   title?: string;
-  onSubmitHandler: (e: JSX.EventHandler<HTMLInputElement, InputEvent>) => void;
+  subtitle?: string;
   children: JSX.Element;
-  buttonTitle: string;
+  size: "sm" | "md" | "lg" | "full";
 };
 
-const CardComponent: Component<Props> = (props) => {
+const Card: Component<Props> = (props) => {
   return (
-    <Card sx={{ minWidth: 300 }}>
-      <CardContent>
-        <Typography variant="h3" component={"div"}>
+    <div
+      class={`w-${props.size ?? "md"} max-w-${props.size ?? "lg"}
+      p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700`}
+    >
+      <a href="#">
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
           {props.title}
-        </Typography>
-        {props.children}
-      </CardContent>
-      <CardActions>
-        <Button size="medium" onclick={() => props.onSubmitHandler}>
-          {props.buttonTitle}
-        </Button>
-      </CardActions>
-    </Card>
+        </h5>
+      </a>
+      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+        {props.subtitle}
+      </p>
+      {props.children}
+    </div>
   );
 };
 
-export default CardComponent;
+export default Card;
