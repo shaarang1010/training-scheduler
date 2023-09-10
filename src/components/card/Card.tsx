@@ -4,13 +4,13 @@ type Props = {
   title?: string;
   subtitle?: string;
   children: JSX.Element;
-  size: "sm" | "md" | "lg" | "full";
+  size: "xs" | "sm" | "md" | "lg" | "full";
 };
 
 const Card: Component<Props> = (props) => {
   return (
     <div
-      class={`w-${props.size ?? "md"} max-w-${props.size ?? "lg"}
+      class={`w-${props.size ?? "lg"} max-w-${props.size ?? "lg"}
       p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700`}
     >
       <a href="#">

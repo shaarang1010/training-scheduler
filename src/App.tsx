@@ -1,22 +1,11 @@
-import { createSignal } from "solid-js";
 import "./App.css";
-import { LoginForm } from "./components/forms/login/Login";
 import "flowbite";
-function App() {
-  const [username, setUsername] = createSignal<string>("");
-  const [password, setPassword] = createSignal<string>("");
+import LoginPage from "./pages/login/LoginPage";
 
+function App() {
   return (
-    <div class="container mx-auto">
-      <LoginForm
-        username={username()}
-        setUserName={setUsername}
-        password={password()}
-        setPassword={setPassword}
-        onLoginFormSubmitHandler={() => {
-          console.log(username());
-        }}
-      />
+    <div class="container w-full mx-auto">
+      <LoginPage />
     </div>
   );
 }
