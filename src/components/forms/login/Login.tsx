@@ -11,12 +11,12 @@ type LoginFormProps = {
 
 export const LoginForm: Component<LoginFormProps> = (props) => {
   return (
-    <div class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+    <div class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl dark:border-gray-500 dark:bg-gray-800 dark:hover:bg-gray-700">
       <div class="flex flex-col">
         <h5 class="mx-4 text-2xl font-bold tracking-tight text-gray-900 dark:text-white w-56">
-          Trainig Scheduler for Athletes
+          Training Scheduler for Athletes
         </h5>
-        <p class="mx-4 mt-2 font-normal text-gray-700 dark:text-gray-400 word-wrap w-56 ">
+        <p class="mx-4 mt-5 font-normal text-gray-700 dark:text-gray-400 word-wrap w-56 ">
           Maintain your training logs on the app and schedule training for the
           season
         </p>

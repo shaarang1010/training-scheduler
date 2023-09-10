@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "date-fns": "^2.30.0",
     "flowbite": "^1.8.1",
     "solid-js": "^1.7.8"
   },
