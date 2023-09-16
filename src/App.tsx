@@ -1,13 +1,11 @@
 import "./App.css";
 import "flowbite";
-import LoginPage from "./pages/login/LoginPage";
-import Dashboard from "./pages/dashboard/Dashboard";
+import { AppRoutes } from "./routes/Routes";
 
 function App() {
   return (
-    <div class="container w-full mx-auto">
-      {/* <LoginPage /> */}
-      <Dashboard />
+    <div class="container mx-auto">
+      <AppRoutes />
     </div>
   );
 }
