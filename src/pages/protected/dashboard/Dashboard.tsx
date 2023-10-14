@@ -9,7 +9,7 @@ const Dashboard = () => {
       </div> */}
 
       <div class="col-span-12 xl:col-span-12">
-        <CalendarView width={100} height={100} days={30} />
+        <CalendarView width={100} height={100} month={10} year={2023} />
       </div>
     </div>
   );

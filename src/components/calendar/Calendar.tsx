@@ -6,15 +6,16 @@ import { createStore } from "solid-js/store";
 type CalendarProps = {
   width: number;
   height: number;
-  days: number;
+  month: number;
+  year: number;
 };
 
 export const CalendarView: Component<CalendarProps> = (props) => {
   const [calendarDates, setCalendarDates] = createStore<CalendarDate[]>([]);
 
   createEffect(() => {
-    const dates = getAllDatesForMonth(2023, 11);
-    setCalendarDates([...getAllDatesForMonth(2023, 10)]);
+    const dates = getAllDatesForMonth(props.year, props.month);
+    setCalendarDates([...dates]);
   });
   return (
     <div class="grid mb-8  rounded-lg shadow-xs  dark:border-gray-700 md:mb-12 md:grid-cols-1 xl:grid-cols-7 xl:grid-rows-5">
