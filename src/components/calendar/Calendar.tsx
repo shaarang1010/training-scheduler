@@ -26,7 +26,9 @@ export const CalendarView: Component<CalendarProps> = (props) => {
           <div
             class={`h-24 xl:h-48 border items-center justify-center text-center bg-white border-b border-gray-100  md:border-r dark:bg-gray-800 dark:border-gray-700 box-shadow-md rounded-md hover:drop-shadow-xl cursor-pointer`}
           >
-            {cd.day} - {cd.dayOfWeek.substring(0, 3)} - {cd.date}
+            {cd.dayOfWeek
+              ? `${cd.day} - ${cd.dayOfWeek.substring(0, 3)} - ${cd.date}`
+              : null}
           </div>
         )}
       </For>

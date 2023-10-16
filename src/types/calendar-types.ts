@@ -1,5 +1,5 @@
 export type CalendarDate = {
-    day: number;
-    date: string;
-    dayOfWeek: string;
+    day: number | null;
+    date: string | null;
+    dayOfWeek: string | null;
 }
