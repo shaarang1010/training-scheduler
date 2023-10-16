@@ -4,7 +4,7 @@ import { AppRoutes } from "./routes/Routes";
 
 function App() {
   return (
-    <div class="container mx-auto">
+    <div class="container lg:max-w-full mx-auto">
       <AppRoutes />
     </div>
   );

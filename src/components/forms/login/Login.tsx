@@ -13,9 +13,9 @@ export const LoginForm: Component<LoginFormProps> = (props) => {
   return (
     <div class="mt-24">
       <div class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl dark:border-gray-500 dark:bg-gray-800 dark:hover:bg-gray-700">
-        <div class="flex flex-col">
+        <div class="flex flex-col my-4">
           <h5 class="mx-4 text-2xl font-bold tracking-tight text-gray-900 dark:text-white w-56">
-            Training Scheduler for Athletes
+            Training Logger for Athletes
           </h5>
           <p class="mx-4 mt-5 font-normal text-gray-700 dark:text-gray-400 word-wrap w-56 ">
             Maintain your training logs on the app and schedule training for the

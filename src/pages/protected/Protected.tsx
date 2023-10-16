@@ -1,11 +1,14 @@
 import { NavigationBar } from "../../components/navbar/NavigationBar";
+import { CalendarProvider } from "../../context/calendar/CalendarContex";
 import Dashboard from "./dashboard/Dashboard";
 
 const ProtectedContent = () => {
   return (
     <div>
-      <NavigationBar />
-      <Dashboard />
+      <CalendarProvider>
+        <NavigationBar />
+        <Dashboard />
+      </CalendarProvider>
     </div>
   );
 };
