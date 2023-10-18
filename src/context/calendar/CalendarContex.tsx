@@ -13,6 +13,7 @@ type Props = {
   currentDate: Accessor<Date>;
   setCurrentMonth: Setter<number>;
   currentMonth: Accessor<number>;
+  setCurrentDate: Setter<Date>;
   children?: JSX.Element;
 };
 const CalendarContext = createContext<Props>();
@@ -29,7 +30,7 @@ export const CalendarProvider: Component<{ children: JSX.Element }> = (
 
   return (
     <CalendarContext.Provider
-      value={{ currentDate, currentMonth, setCurrentMonth }}
+      value={{ currentDate, currentMonth, setCurrentMonth, setCurrentDate }}
     >
       {props.children}
     </CalendarContext.Provider>
