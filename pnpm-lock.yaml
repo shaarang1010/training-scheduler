@@ -17,6 +17,9 @@ dependencies:
   flowbite:
     specifier: ^1.8.1
     version: 1.8.1
+  solid-icons:
+    specifier: ^1.0.12
+    version: 1.0.12(solid-js@1.7.11)
   solid-js:
     specifier: ^1.7.8
     version: 1.7.11
@@ -2062,6 +2065,15 @@ packages:
       call-bind: 1.0.2
       get-intrinsic: 1.2.1
       object-inspect: 1.12.3
+    dev: false
+
+  /solid-icons@1.0.12(solid-js@1.7.11):
+    resolution: {integrity: sha512-HOIQ2nFGLEH9/QHnMiu6CZkEMrRlrEvxpX3V3XikvQQ/CQNhOKl2vLQALaJYgz3MvfPP5wkid+q79tTdIw5YGQ==}
+    engines: {node: '>= 16'}
+    peerDependencies:
+      solid-js: '*'
+    dependencies:
+      solid-js: 1.7.11
     dev: false
 
   /solid-js@1.7.11:
