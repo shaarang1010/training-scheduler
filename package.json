@@ -12,7 +12,9 @@
     "@recogito/annotorious": "^2.7.12",
     "@solidjs/router": "^0.8.3",
     "date-fns": "^2.30.0",
+    "firebase": "^10.5.0",
     "flowbite": "^1.8.1",
+    "solid-firebase": "^0.3.0",
     "solid-icons": "^1.0.12",
     "solid-js": "^1.7.8"
   },
