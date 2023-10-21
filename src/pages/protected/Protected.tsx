@@ -1,14 +1,22 @@
+import { Outlet, useNavigate } from "@solidjs/router";
 import { NavigationBar } from "../../components/navbar/NavigationBar";
-import { CalendarProvider } from "../../context/calendar/CalendarContex";
-import Dashboard from "./dashboard/Dashboard";
+import { createEffect } from "solid-js";
 
 const ProtectedContent = () => {
+  const navigate = useNavigate();
+
+  const token = sessionStorage.getItem("token");
+  createEffect(() => {
+    console.log("token===>", token);
+    if (!token) {
+      navigate("/login");
+    }
+  });
+
   return (
     <div>
-      <CalendarProvider>
-        <NavigationBar />
-        <Dashboard />
-      </CalendarProvider>
+      <NavigationBar />
+      <Outlet />
     </div>
   );
 };

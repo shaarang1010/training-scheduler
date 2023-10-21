@@ -18,6 +18,7 @@ const LoginPage = () => {
           password={password()}
           setPassword={setPassword}
           onLoginFormSubmitHandler={() => {
+            sessionStorage.setItem("token", "sometoken");
             navigate("/dashboard");
           }}
         />
