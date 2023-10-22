@@ -1,4 +1,5 @@
 import { Component, Setter, Accessor } from "solid-js";
+import { Color } from "../../../types/color";
 
 /**
  * Form event
@@ -8,8 +9,8 @@ type FormProps = {
   eventName: Accessor<string>;
   setEventName: Setter<string>;
   eventDate: Accessor<string>;
-  color: Accessor<string>;
-  setColor: Setter<string>;
+  color: Accessor<Color>;
+  setColor: Setter<Color>;
   tags: Accessor<string[]>;
   setTags: Setter<string[]>;
   comments: Accessor<string>;

@@ -4,8 +4,14 @@ import { GridContainer } from "../../components/layout/grid/GridContainer";
 import { GridCol } from "../../components/layout/grid/Columns";
 import { LogEntryForm } from "../../components/forms/log-entry/LogEntry";
 import { useParams } from "@solidjs/router";
+import { Color } from "../../types/color";
 const LogEntryPage = () => {
   const { id } = useParams();
+  const [eventName, setEventName] = createSignal<string>("");
+  const [eventDate, setEventDate] = createSignal<string>(id);
+  const [color, setColor] = createSignal<Color>("none");
+  const [tags, setTags] = createSignal<string[]>([]);
+  const [comments, setComments] = createSignal<string>("");
   return (
     // <div class="relative max-w-sm">
     //   <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -27,7 +33,18 @@ const LogEntryPage = () => {
     //   />
     // </div>
     <div>
-      <LogEntryForm />
+      <LogEntryForm
+        eventDate={eventDate}
+        setEventName={setEventName}
+        eventName={eventName}
+        color={color}
+        setColor={setColor}
+        setComments={setComments}
+        comments={comments}
+        tags={tags}
+        setTags={setTags}
+        onSaveHandler={() => {}}
+      />
       <p>{id}</p>
     </div>
   );
