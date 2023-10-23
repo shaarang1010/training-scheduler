@@ -14,6 +14,6 @@ export const getColor = (color: Color) =>{
         case 'yellow':
             return 'bg-yellow-300';
         default:
-            return 'bg-slate-50'
+            return 'bg-slate-300'
     }
 } 

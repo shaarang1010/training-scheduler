@@ -1,4 +1,4 @@
-import { Route, Routes } from "@solidjs/router";
+import { Route, Routes, Navigate } from "@solidjs/router";
 import LoginPage from "../pages/login/LoginPage";
 import ProtectedContent from "../pages/protected/Protected";
 import LogEntryPage from "../pages/logentry/LogEntry";

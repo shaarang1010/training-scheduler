@@ -7,7 +7,6 @@ const ProtectedContent = () => {
 
   const token = sessionStorage.getItem("token");
   createEffect(() => {
-    console.log("token===>", token);
     if (!token) {
       navigate("/login");
     }
