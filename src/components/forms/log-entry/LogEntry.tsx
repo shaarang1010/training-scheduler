@@ -34,12 +34,13 @@ export const LogEntryForm: Component<FormProps> = (props) => {
       <div class="mb-6">
         <label
           for="eventName"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-semibold text-gray-900 dark:text-white"
         >
           Event Name
         </label>
         <input
           id="eventName"
+          type="text"
           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           value={props.eventName()}
         />
@@ -47,7 +48,7 @@ export const LogEntryForm: Component<FormProps> = (props) => {
       <div class="mb-6">
         <label
           for="eventDate"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-semibold text-gray-900 dark:text-white"
         >
           Event Date
         </label>
@@ -55,17 +56,36 @@ export const LogEntryForm: Component<FormProps> = (props) => {
           type="text"
           id="eventDate"
           disabled
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          class="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           value={format(new Date(props.eventDate()), "dd-MM-yyyy")}
         />
+      </div>
+      <div class="mb-6">
+        <label
+          for="activityStats"
+          class="block mb-2 text-sm font-semibold text-gray-900 dark:text-white"
+        >
+          Activity stats
+        </label>
+        <dl class="flex flex-col text-gray-900  dark:text-white justify-start">
+          <div class="flex flex-row items-center">
+            <dt class="mb-2 text-2xl font-extrabold mr-4">21.1KM</dt>
+            <dd class="text-gray-500 dark:text-gray-400">Distance covered</dd>
+          </div>
+
+          <div class="flex flex-row items-center">
+            <dt class="mb-2 text-2xl font-extrabold mr-4">4:24/km</dt>
+            <dd class="text-gray-500 dark:text-gray-400">Pace</dd>
+          </div>
+        </dl>
       </div>
 
       <div class="mb-6">
         <label
           for="eventDate"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          class="block mb-2 text-sm font-semibold text-gray-900 dark:text-white"
         >
-          Choose color
+          Choose Color
         </label>
         <div class="flex flex-row">
           <For each={colorOptions}>
@@ -82,6 +102,34 @@ export const LogEntryForm: Component<FormProps> = (props) => {
             )}
           </For>
         </div>
+      </div>
+      <div class="mb-6">
+        <label
+          for="comments"
+          class="block mb-2 text-sm font-semibold text-gray-900 dark:text-white"
+        >
+          Additional comments
+        </label>
+        <textarea
+          id="comments"
+          rows="4"
+          class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="Write your thoughts here..."
+        ></textarea>
+      </div>
+      <div class="flex flex-col md:flex-row justify-start mt-8">
+        <button
+          type="submit"
+          class="text-white bg-blue-700  hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+          Save
+        </button>
+        <button
+          type="button"
+          class="md:ml-8 text-white bg-blue-700  hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+          Cancel
+        </button>
       </div>
     </form>
   );

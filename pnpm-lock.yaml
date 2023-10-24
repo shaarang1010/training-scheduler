@@ -11,6 +11,9 @@ dependencies:
   '@solidjs/router':
     specifier: ^0.8.3
     version: 0.8.3(solid-js@1.7.11)
+  '@thisbeyond/solid-select':
+    specifier: ^0.14.0
+    version: 0.14.0(solid-js@1.7.11)
   date-fns:
     specifier: ^2.30.0
     version: 2.30.0
@@ -1278,6 +1281,14 @@ packages:
     resolution: {integrity: sha512-oJuqQo10rVTiQYhe1qXIG1NyZIZ2YOwHnlLc8Xx+g/iJhFCJo1saLOIrD/Dkh2fpIaIny5ZMkz1cYYqoTYGJbg==}
     peerDependencies:
       solid-js: ^1.5.3
+    dependencies:
+      solid-js: 1.7.11
+    dev: false
+
+  /@thisbeyond/solid-select@0.14.0(solid-js@1.7.11):
+    resolution: {integrity: sha512-ecq4U3Vnc/nJbU84ARuPg2scNuYt994ljF5AmBlzuZW87x43mWiGJ5hEWufIJJMpDT6CcnCIx/xbrdDkaDEHQw==}
+    peerDependencies:
+      solid-js: ^1.5
     dependencies:
       solid-js: 1.7.11
     dev: false
