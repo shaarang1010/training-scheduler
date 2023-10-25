@@ -1,7 +1,7 @@
 /**Tags to be used to tag the activity */
 
 
-const activityTags = [
+export const activityTags = [
  {
    type: "left_shoulder",
    value: "Left shoulder",

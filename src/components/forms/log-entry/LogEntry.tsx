@@ -1,6 +1,8 @@
 import { Component, Setter, Accessor, For } from "solid-js";
 import { Color, getColor } from "../../../types/color";
 import { format } from "date-fns";
+import { activityTags } from "../../../types/tags";
+import { Badge } from "../../badge/Badge";
 
 /**
  * Form event
@@ -69,20 +71,19 @@ export const LogEntryForm: Component<FormProps> = (props) => {
         </label>
         <dl class="flex flex-col text-gray-900  dark:text-white justify-start">
           <div class="flex flex-row items-center">
-            <dt class="mb-2 text-2xl font-extrabold mr-4">21.1KM</dt>
+            <dt class="mb-2 text-xl font-extrabold mr-4">21.1KM</dt>
             <dd class="text-gray-500 dark:text-gray-400">Distance covered</dd>
           </div>
 
           <div class="flex flex-row items-center">
-            <dt class="mb-2 text-2xl font-extrabold mr-4">4:24/km</dt>
+            <dt class="mb-2 text-xl font-extrabold mr-4">4:24/km</dt>
             <dd class="text-gray-500 dark:text-gray-400">Pace</dd>
           </div>
         </dl>
       </div>
-
       <div class="mb-6">
         <label
-          for="eventDate"
+          for="color"
           class="block mb-2 text-sm font-semibold text-gray-900 dark:text-white"
         >
           Choose Color
@@ -102,6 +103,14 @@ export const LogEntryForm: Component<FormProps> = (props) => {
             )}
           </For>
         </div>
+      </div>
+      <div class="mb-6">
+        <label
+          for="color"
+          class="block mb-2 text-sm font-semibold text-gray-900 dark:text-white"
+        >
+          Select tags
+        </label>
       </div>
       <div class="mb-6">
         <label
