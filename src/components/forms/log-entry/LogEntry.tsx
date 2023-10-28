@@ -117,7 +117,7 @@ export const LogEntryForm: Component<FormProps> = (props) => {
           for="comments"
           class="block mb-2 text-sm font-semibold text-gray-900 dark:text-white"
         >
-          Additional comments
+          Additional comments/insghts
         </label>
         <textarea
           id="comments"
