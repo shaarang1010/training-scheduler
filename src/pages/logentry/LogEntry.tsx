@@ -1,7 +1,5 @@
 import { createSignal } from "solid-js";
 
-import { GridContainer } from "../../components/layout/grid/GridContainer";
-import { GridCol } from "../../components/layout/grid/Columns";
 import { LogEntryForm } from "../../components/forms/log-entry/LogEntry";
 import { useParams } from "@solidjs/router";
 import { Color } from "../../types/color";

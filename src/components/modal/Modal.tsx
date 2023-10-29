@@ -1,3 +1,5 @@
+import { ImageAnnotation } from "../anotations/ImageAnnotation";
+
 export const Modal = () => {
   return (
     <div class="block space-y-4 md:flex md:space-y-0 md:space-x-4">
@@ -36,11 +38,7 @@ export const Modal = () => {
               </button>
             </div>
             <div class="flex justify-center p-6 space-y-6">
-              <img
-                class="h-auto max-w-lg rounded-lg"
-                src="http://www.shapesense.com/images/blank-muscle-anatomy.jpg"
-                alt="image description"
-              />
+              <ImageAnnotation />
             </div>
             <div class="flex flex-end items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
               <button
