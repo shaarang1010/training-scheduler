@@ -60,21 +60,13 @@ export const ImageAnnotation = () => {
     console.log(anno().getAnnotations());
   };
 
-  //   // Toggles current tool + button label
-  //   const toggleTool = () => {
-  //     if (tool() === "rect") {
-  //       setTool("polygon");
-  //       //@ts-expect-error TS2532
-  //       anno.setDrawingTool("polygon");
-  //     } else {
-  //       setTool("rect");
-  //       //@ts-expect-error TS2532
-  //       anno.setDrawingTool("rect");
-  //     }
-  //   };
-
   return (
     <div>
+      <div class="flex flex-row justify-between">
+        <h3 class="font-lg font-bold">R</h3>
+        <h3 class="font-lg font-bold ml-4">L</h3>
+        <h3 class="font-lg font-bold">R</h3>
+      </div>
       <img
         ref={imgRef}
         src={HumanMuscularSkeleton}
