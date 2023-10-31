@@ -4,6 +4,7 @@ import { LogEntryForm } from "../../components/forms/log-entry/LogEntry";
 import { useParams } from "@solidjs/router";
 import { Color } from "../../types/color";
 import { Modal } from "../../components/modal/Modal";
+import { Accordion } from "../../components/accordion/Accordion";
 const LogEntryPage = () => {
   const { id } = useParams();
   const [eventName, setEventName] = createSignal<string>("");
@@ -27,6 +28,7 @@ const LogEntryPage = () => {
             setTags={setTags}
             onSaveHandler={() => {}}
           />
+          <Accordion options={[]} />
         </div>
         <div class="col-span-12 md:col-span-6 mt-24 mx-12 cursor-pointer">
           <img
