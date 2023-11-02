@@ -46,9 +46,9 @@ export const Dropdown: Component<DropdownProps> = (props) => {
                 <input
                   id={`checkbox-item-${index}`}
                   type="checkbox"
-                  value={option.key}
-                  checked={props.selected.includes(option.key)}
-                  onChange={() => props.onChangeHandler(option.key)}
+                  value={option.type}
+                  checked={props.selected.includes(option.type)}
+                  onchange={() => props.onChangeHandler(option.type)}
                   class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
                 />
                 <label

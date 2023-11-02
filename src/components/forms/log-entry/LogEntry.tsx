@@ -1,4 +1,4 @@
-import { Component, Setter, Accessor, For } from "solid-js";
+import { Component, Setter, Accessor, For, createSignal } from "solid-js";
 import { Color, getColor } from "../../../types/color";
 import { format } from "date-fns";
 import { activityTags } from "../../../types/tags";
@@ -31,6 +31,17 @@ export const LogEntryForm: Component<FormProps> = (props) => {
     "blue",
     "none",
   ];
+
+  const [selectedTags, setSelectedTags] = createSignal<string[]>([]);
+
+  const onChangeHandler = (val: string) => {
+    console.log(val);
+    if (selectedTags().includes(val)) {
+      setSelectedTags(selectedTags().filter((tag) => tag !== val));
+    } else {
+      setSelectedTags([...selectedTags(), val]);
+    }
+  };
 
   return (
     <form class=" mx-12 my-24">
@@ -112,7 +123,12 @@ export const LogEntryForm: Component<FormProps> = (props) => {
         >
           Tags
         </label>
-        <Dropdown />
+        <Dropdown
+          text="Tag parts"
+          options={activityTags}
+          selected={selectedTags()}
+          onChangeHandler={onChangeHandler}
+        />
       </div>
       <div class="mb-6">
         <label
@@ -130,8 +146,9 @@ export const LogEntryForm: Component<FormProps> = (props) => {
       </div>
       <div class="flex flex-col md:flex-row justify-start mt-8">
         <button
-          type="submit"
+          type="button"
           class="text-white bg-blue-700  hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          onClick={() => console.log(selectedTags())}
         >
           Save
         </button>
