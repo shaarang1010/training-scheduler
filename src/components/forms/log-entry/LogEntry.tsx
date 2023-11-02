@@ -3,6 +3,7 @@ import { Color, getColor } from "../../../types/color";
 import { format } from "date-fns";
 import { activityTags } from "../../../types/tags";
 import { Badge } from "../../badge/Badge";
+import { Dropdown } from "../../dropdown/Dropdown";
 
 /**
  * Form event
@@ -109,8 +110,9 @@ export const LogEntryForm: Component<FormProps> = (props) => {
           for="color"
           class="block mb-2 text-sm font-semibold text-gray-900 dark:text-white"
         >
-          Select tags
+          Tags
         </label>
+        <Dropdown />
       </div>
       <div class="mb-6">
         <label

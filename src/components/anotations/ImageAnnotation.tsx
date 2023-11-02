@@ -72,9 +72,6 @@ export const ImageAnnotation = () => {
         src={HumanMuscularSkeleton}
         alt="Hallstatt Town Square"
       />
-      <button type="button" onClick={onSave}>
-        Save
-      </button>
     </div>
   );
 };
