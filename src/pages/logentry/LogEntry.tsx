@@ -28,7 +28,6 @@ const LogEntryPage = () => {
             setTags={setTags}
             onSaveHandler={() => {}}
           />
-          <Accordion options={[]} />
         </div>
         <div class="col-span-12 md:col-span-6 mt-24 mx-12 cursor-pointer">
           <img

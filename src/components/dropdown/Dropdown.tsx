@@ -15,7 +15,9 @@ export const Dropdown: Component<DropdownProps> = (props) => {
         class="text-black bg-slate-50 hover:bg-slate-200 focus:ring-4 focus:outline-none focus:ring-slate-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-slate-300 dark:focus:ring-slate-400 border border-gray-300"
         type="button"
       >
-        {props.text}
+        {props.selected.length > 0
+          ? props.selected.length + " selected"
+          : props.text}
         <svg
           class="w-2.5 h-2.5 ml-2.5"
           aria-hidden="true"
