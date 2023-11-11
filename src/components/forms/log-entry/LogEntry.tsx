@@ -2,7 +2,6 @@ import { Component, Setter, Accessor, For, createSignal } from "solid-js";
 import { Color, getColor } from "../../../types/color";
 import { format } from "date-fns";
 import { activityTags } from "../../../types/tags";
-import { Badge } from "../../badge/Badge";
 import { Dropdown } from "../../dropdown/Dropdown";
 
 /**
@@ -124,7 +123,7 @@ export const LogEntryForm: Component<FormProps> = (props) => {
           Tags
         </label>
         <Dropdown
-          text="Tag parts"
+          text="Add tags"
           options={activityTags}
           selected={selectedTags()}
           onChangeHandler={onChangeHandler}
